@@ -4,65 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joseph Tusay | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        :root {
+            --bg-color: #e0f7fa; /* Light blue background */
+            --text-color: #333333; /* Dark gray for text */
+            --primary-color: #039be5; /* Bright blue for accents */
+            --secondary-color: #0077b6; /* Deep blue for contrast */
+            --accent-color: #00bcd4; /* Cyan for highlights */
+            --font-stack: 'Poppins', sans-serif;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: var(--font-stack);
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             text-align: center;
+            line-height: 1.6;
         }
+        
+        header {
+            padding: 100px 20px 80px; /* Adjusted padding for the profile picture */
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            position: relative;
+        }
+        
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin: 0 auto 20px;
+            display: block;
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+        
+        nav {
+            margin-top: 20px;
+        }
+        
         nav ul {
             list-style: none;
             padding: 0;
         }
+        
         nav ul li {
             display: inline;
-            margin: 0 15px;
+            margin: 0 20px;
         }
+        
         nav ul li a {
-            color: #fff;
+            color: white;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
         }
+        
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+        
         section {
-            padding: 20px;
-            margin: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: auto;
         }
+        
+        h2 {
+            font-size: 2.2em;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-in-out;
+        }
+        
         .project {
-            background: #eaeaea;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
+            background: white;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+        
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .project h3 {
+            color: var(--primary-color);
+            font-size: 1.5em;
+            margin: 0 0 10px;
+        }
+        
+        .project p {
+            margin: 0;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        ul li {
+            margin: 15px 0;
+            font-size: 1.1em;
+        }
+        
         footer {
-            text-align: center;
-            padding: 20px;
-            background: #333;
-            color: #fff;
-            margin-top: 20px;
+            padding: 30px;
+            background: var(--secondary-color);
+            color: white;
+            margin-top: 40px;
         }
-        a {
-            color: #007bff;
+        
+        footer a {
+            color: var(--accent-color);
             text-decoration: none;
+            transition: color 0.3s ease;
         }
-        a:hover {
-            text-decoration: underline;
+        
+        footer a:hover {
+            color: var(--primary-color);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
 <body>
     <header>
+        <img src="https://i.ibb.co/rG8q3vTm/imageprofile.jpg" alt="Joseph Tusay" class="profile-picture">
         <h1>Joseph Tusay</h1>
         <p>Senior Developer | IT Professional | Web & System Developer</p>
         <nav>
@@ -77,18 +174,49 @@
     
     <section id="about">
         <h2>About Me</h2>
-        <p>I am an experienced IT professional and senior developer with over 8 years of expertise in Linux, Azure, Laravel, PHP, React.js, CSS, and HTML. I specialize in system automation, document tracking solutions, and web development.</p>
+        <p>I am an experienced IT professional and senior developer with over 8 years of expertise in Linux, Azure, Laravel, PHP, React.js, CSS, and HTML. I specialize in system automation, document tracking solutions, and web development. My experience spans across a variety of technologies and frameworks, allowing me to deliver scalable, efficient, and user-friendly solutions. I am passionate about leveraging cutting-edge technologies to streamline processes and enhance system performance. Throughout my career, I have worked on projects that emphasize both functionality and security, ensuring high-quality results for every client.
+        </p><br><br>
+        <h2>Tech Stack (Backend)</h2>
+        <p>PHP vanilla </p>
+        <p>LARAVEL:PHP framework for building web app</p>
+        <p>TESTING</p>
+        <p>DATABASE(MYSQL/POSGRESQL RDBMS, ELOQUENT ORM(LARAVEL))</p>
+        <h2>Tech Stack (Frontend)</h2>
+        <p>HTML,CSS,Javascript</p>
+        <p>BLADE TEMPLATING(LARAVEL)</p>
+        <p>JS frameworks: VueJS, ReactJS, Angular</p>
+        <p>GIT</p>
+        <p>Generative AI: Chat GPT, Co pilot, Deep Seek, Dall E, MidJourney</p>
+
     </section>
     
     <section id="portfolio">
         <h2>Portfolio</h2>
         <div class="project">
+            <h3>Document Tracking System(laravel)</h3>
+            <p>Developed a Laravel-based system for managing document workflows and approvals.</p>
+        </div>
+        <div class="project">
+            <h3>Preventive Maintenance System</h3>
+            <p>Developed a Laravel-based system for managing document workflows and approvals.</p>
+        </div>
+        <div class="project">
             <h3>Document Tracking System</h3>
             <p>Developed a SharePoint-based system for managing document workflows and approvals.</p>
         </div>
         <div class="project">
-            <h3>Web Application for [Client Name]</h3>
-            <p>Built a Laravel and React.js-based platform to streamline business operations.</p>
+            <h3>Web Application for CBILLS</h3>
+            <p>Built a Wordpress and PHP platform to streamline business operations.</p>
+        </div>
+        <div class="project">
+            <h3>BOQ DUPA INFORMATION SYSTEM(BIDDING)
+            </h3>
+            <p>Built a Laravel Framework used for bidding.</p>
+        </div>
+        <div class="project">
+            <h3>PROJECT MANAGEMENT INFORMATION SYSTEM(PMIS)
+            </h3>
+            <p>Built a Laravel Framework used for Project Management.</p>
         </div>
     </section>
     
@@ -104,9 +232,9 @@
     
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:joseph@example.com">joseph@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/yourgithub" target="_blank">github.com/yourgithub</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/yourlinkedin</a></p>
+        <p>Email: <a href="mailto:joseph.tusay123@gmail.com">joseph.tusay123@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/tutski3" target="_blank">github.com/tutski3</a></p>
+        <p>Contact: <a href="" target="_blank">0956729480(whatsapp and viber)</a></p>
     </section>
     
     <footer>
